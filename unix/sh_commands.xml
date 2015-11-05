@@ -1,0 +1,12 @@
+<!--
+name: custom shell script
+description: Run custom shell commands using -c flag.  NOTE: It is recommended to keep a script in version control instead and fetch it as part of materials.  If you still want to run custom commands, use the arg -c, and on a single line below it: "all ; shell ; commands ... etc" (without quotes)
+author: Gunnar
+authorinfo: http://support.thoughtworks.com/categories/20002778-go-community-support
+keywords: sh, script, shell, bash, commands, run
+moreinfo: http://en.wikipedia.org/wiki/Bash
+-->
+<exec command="/bin/bash">
+  <arg>-c</arg>
+  <arg>if true ; then MYVAR=foo ./configure && make ; done</arg>
+</exec>
