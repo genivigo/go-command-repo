@@ -1,0 +1,12 @@
+<!--
+name: Yocto/Bitbake limit server load 
+description: An example how to modify local.conf in a task.  Use it to limit bitbake and make parallel processes (lower load on agent), or to increase to speed up the build.  REMEMBER to set current directory so that local.conf is found there.
+author: Gunnar 
+authorinfo: http://github.com/genivigo/go-command-repo.git
+keywords: sh, script, shell, bash, yocto, bitbake, local.conf
+moreinfo: http://www.yoctoproject.org/docs/1.8/mega-manual/mega-manual.html#speeding-up-the-build
+-->
+<exec command="/bin/sh">
+  <arg>-c</arg>
+  <arg>/bin/echo -e 'BB_NUMBER_THREADS = "2"\nPARALLEL_MAKE = "-j2"' >>local.conf</arg>
+</exec>
