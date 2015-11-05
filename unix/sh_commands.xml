@@ -8,5 +8,5 @@ moreinfo: http://en.wikipedia.org/wiki/Bash
 -->
 <exec command="/bin/bash">
   <arg>-c</arg>
-  <arg>if true ; then MYVAR=foo ./configure && make ; done</arg>
+  <arg>if true ; then MYVAR=foo ./configure &amp;&amp; make ; done</arg>
 </exec>
