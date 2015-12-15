@@ -1,0 +1,12 @@
+<!--
+name: source a script
+description: Runs script.sh using source. Note that "sh" might not accept the "source" command.  You can use the traditional dot (.) syntax for source, or invoke for example bash.  Here we show the dot syntax for maximum compatibility. This also shows the use of the -c flag to shell to run any shell command (as opposed to only starting a script which does not require -c)
+author: Gunnar
+authorinfo: None
+keywords: source, sh, script, shell, bash
+moreinfo: https://en.wikipedia.org/wiki/Bourne_shell
+-->
+<exec command="/bin/sh">
+  <arg>-c</arg>
+  <arg>. ./myscript &amp;&amp; anothercommand</arg>
+</exec>
